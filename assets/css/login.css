@@ -1,0 +1,194 @@
+/* ======================================================
+   FS Art Studio
+   Login Premium - New Group
+   ====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Inter,Arial,sans-serif;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#06111f;
+
+    color:#fff;
+
+}
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(rgba(3,18,35,.82),rgba(3,18,35,.90)),
+
+    url("../images/hero-background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    filter:blur(2px);
+
+    transform:scale(1.08);
+
+}
+
+.login-container{
+
+    position:relative;
+
+    z-index:10;
+
+    width:460px;
+
+    max-width:92%;
+
+    padding:55px;
+
+    border-radius:24px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.45);
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:220px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:#00B8FF;
+
+    color:#001A2D;
+
+    font-weight:700;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:28px;
+
+}
+
+h1{
+
+    font-size:38px;
+
+    margin-bottom:18px;
+
+}
+
+p{
+
+    color:#cfd7df;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#222;
+
+    font-size:17px;
+
+    margin-bottom:22px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    background:#00B8FF;
+
+    color:#001A2D;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,184,255,.45);
+
+}
+
+small{
+
+    display:block;
+
+    margin-top:28px;
+
+    color:#b8c4d1;
+
+    letter-spacing:1px;
+
+}
