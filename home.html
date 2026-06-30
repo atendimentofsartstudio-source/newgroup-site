@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>New Group — Soluções Industriais, Engenharia e Gestão de Projetos</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+<style>
 /* ==========================================
 Loader
 ========================================== */
@@ -64,7 +66,6 @@ opacity:.5;
 }
 
 }
-<style>
 /* ============================================================
    CSS VARIABLES — fácil de substituir para temas WP
    ============================================================ */
@@ -730,6 +731,30 @@ transform:scale(1.10);
 .form-control::placeholder{color:var(--text-faint);}
 textarea.form-control{resize:vertical;min-height:130px;}
 
+#mapa{
+
+width:100%;
+
+height:520px;
+
+margin:0;
+
+padding:0;
+
+}
+
+#mapa iframe{
+
+width:100%;
+
+height:100%;
+
+border:0;
+
+display:block;
+
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -854,8 +879,8 @@ footer{
       <span class="stat-label">Satisfação dos clientes</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num" data-target="0" data-prefix="" data-suffix=" acidentes">0</span>
-      <span class="stat-label">Registro de acidentes</span>
+      <span class="stat-num" data-target="0" data-prefix="" data-suffix="">0</span>
+      <span class="stat-label">Acidentes registrados</span>
     </div>
     <div class="stat-item">
       <span class="stat-num" data-target="360" data-suffix="°">0</span>
@@ -1369,13 +1394,6 @@ footer{
           <div class="cinfo-item"><div class="cinfo-label">Localização</div><div class="cinfo-val">Rio de Janeiro, RJ — Brasil</div></div>
           <div class="cinfo-item"><div class="cinfo-label">Horário de atendimento</div><div class="cinfo-val">Segunda a Sexta, 08h–18h</div></div>
         </div>
-        <!-- [IMG] Foto do escritório ou equipe -->
-        <div class="contato-img">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&fit=crop" alt="Equipe New Group" loading="lazy"/>
-          <div class="contato-img-overlay"></div>
-          <div class="contato-img-text">"Prontos para o seu próximo projeto."</div>
-        </div>
-      </div>
       <div class="form-block reveal-right">
         <div class="form-row">
           <div class="form-group"><label class="form-label">Nome</label><input type="text" class="form-control" placeholder="Seu nome completo"/></div>
@@ -1419,29 +1437,7 @@ referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 
 </section>
-#mapa{
 
-width:100%;
-
-height:520px;
-
-margin:0;
-
-padding:0;
-
-}
-
-#mapa iframe{
-
-width:100%;
-
-height:100%;
-
-border:0;
-
-display:block;
-
-}
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand"><div class="nav-brand-dot" style="width:6px;height:6px;margin-right:0.4rem;"></div>NEW <span>GROUP</span> &nbsp;·&nbsp; New Flux Ltda.</div>
