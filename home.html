@@ -95,9 +95,27 @@ a{text-decoration:none;color:inherit;}
 /* ============================================================
    SCROLLBAR
    ============================================================ */
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:var(--dark);}
-::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:2px;}
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg,#c8b27a,#8f7742);
+    border-radius:10px;
+    border:2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(180deg,#d8c08a,#a58b55);
+}
 
 /* ============================================================
    UTILITY
@@ -856,7 +874,6 @@ footer{
     </div>
   </div>
   <div class="hero-scroll">
-    <span>Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
