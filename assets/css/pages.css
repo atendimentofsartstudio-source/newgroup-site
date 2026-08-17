@@ -1,0 +1,2926 @@
+/* ============================================================
+   TEMPLATE INTERNO
+   ============================================================ */
+
+.page-hero{
+
+    position:relative;
+
+    height:100vh;
+
+    min-height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+.page-hero-bg{
+    position:absolute;
+    inset:0;
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    transform:scale(1.05);
+    animation:heroZoom 18s ease-in-out infinite alternate;
+}
+
+/* ============================================================
+   HERO — IMAGENS ESPECÍFICAS DAS PÁGINAS
+   ============================================================ */
+
+.page-hero--empresa .page-hero-bg{
+    background-image:url("../images/hero-empresa.png");
+}
+
+.page-hero--ouvidoria .page-hero-bg{
+    background-image:url("../images/hero-ouvidoria.png");
+}
+
+.page-hero--servicos .page-hero-bg{
+    background-image:url("../images/hero-servicos.png");
+}
+
+.page-hero--trabalhe .page-hero-bg{
+    background-image:url("../images/hero-trabalhe-conosco.png");
+}
+
+.page-hero--contato .page-hero-bg{
+    background-image:url("../images/hero-contato.png");
+}
+
+.page-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(10,10,10,.70),
+
+        rgba(10,10,10,.82)
+
+    );
+
+}
+
+.page-hero-content{
+
+    position:relative;
+
+    z-index:3;
+
+    text-align:center;
+
+    max-width:760px;
+
+}
+
+.page-eyebrow{
+
+    color:var(--gold-light);
+
+    font-size:.75rem;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+    margin-bottom:24px;
+
+}
+
+.page-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.page-subtitle{
+
+    color:var(--text-muted);
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+}
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+
+.breadcrumb{
+
+    background:#111;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.breadcrumb .container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 0;
+
+    font-size:.85rem;
+
+}
+
+.breadcrumb a{
+
+    color:var(--gold-light);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.breadcrumb a:hover{
+
+    color:white;
+
+}
+
+.breadcrumb span{
+
+    color:var(--text-light);
+
+}
+
+.breadcrumb strong{
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ============================================================
+   EMPRESA — CONTEÚDO INTERNO
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   QUEM SOMOS
+   ------------------------------------------------------------ */
+
+.empresa-intro{
+    background:var(--dark);
+    padding:5rem 0;
+}
+
+.empresa-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5rem;
+    align-items:center;
+}
+
+.empresa-img{
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--gold-dim);
+    background:var(--dark-3);
+}
+
+.empresa-img::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(12,11,9,.15),
+        transparent 60%,
+        rgba(196,154,42,.12)
+    );
+    pointer-events:none;
+}
+
+.empresa-img img{
+    display:block;
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    filter:brightness(.78) sepia(.08);
+    transition:transform .8s ease, filter .6s ease;
+}
+
+.empresa-img:hover img{
+    transform:scale(1.04);
+    filter:brightness(.9) sepia(.03);
+}
+
+.empresa-text{
+    max-width:620px;
+}
+
+.empresa-text .section-eyebrow{
+    margin-bottom:1rem;
+}
+
+.empresa-text .section-title{
+    margin-bottom:1.8rem;
+}
+
+.empresa-text p{
+    color:var(--text-muted);
+    font-size:.95rem;
+    line-height:1.9;
+    font-weight:300;
+    margin-bottom:1.2rem;
+}
+
+
+/* ------------------------------------------------------------
+   HISTÓRIA
+   ------------------------------------------------------------ */
+
+.empresa-historia{
+    background:var(--dark-3);
+    padding:2rem 0;
+    border-top:1px solid var(--gold-dim);
+    border-bottom:1px solid var(--gold-dim);
+}
+
+.empresa-historia .section-header{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 5rem;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:0 auto;
+    padding:1rem 0;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    width:1px;
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        var(--gold-dim) 10%,
+        var(--gold-dim) 90%,
+        transparent
+    );
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4rem;
+    margin-bottom:4rem;
+}
+
+.timeline-item:last-child{
+    margin-bottom:0;
+}
+
+.timeline-item:nth-child(odd) .timeline-year{
+    text-align:right;
+    padding-right:2rem;
+}
+
+.timeline-item:nth-child(even) .timeline-year{
+    grid-column:2;
+    grid-row:1;
+    text-align:left;
+    padding-left:2rem;
+}
+
+.timeline-item:nth-child(odd) .timeline-content{
+    padding-left:2rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content{
+    grid-column:1;
+    grid-row:1;
+    text-align:right;
+    padding-right:2rem;
+}
+
+.timeline-year{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.8rem;
+    font-weight:600;
+    color:var(--gold-light);
+    line-height:1;
+}
+
+.timeline-content{
+    color:var(--text-muted);
+}
+
+.timeline-content h3{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:1.15rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:.6rem;
+}
+
+.timeline-content p{
+    font-size:.88rem;
+    line-height:1.7;
+    font-weight:300;
+    margin:0;
+}
+
+.timeline-item::after{
+    content:'';
+    position:absolute;
+    top:.25rem;
+    left:50%;
+    width:10px;
+    height:10px;
+    border:2px solid var(--gold-light);
+    background:var(--dark-3);
+    border-radius:50%;
+    transform:translateX(-50%);
+    box-shadow:0 0 0 5px rgba(196,154,42,.06);
+}
+
+
+/* ------------------------------------------------------------
+   MISSÃO • VISÃO • VALORES
+   ------------------------------------------------------------ */
+
+.empresa-mvv{
+    background:var(--dark);
+    padding:6rem 0;
+}
+
+.mvv-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+
+.mvv-card{
+    position:relative;
+    padding:2rem 0rem;
+    background:var(--dark-3);
+    border:1px solid var(--gold-dim);
+    text-align:center;
+    overflow:hidden;
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        background .4s ease;
+}
+
+.mvv-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background:var(--gold-light);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .45s ease;
+}
+
+.mvv-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(196,154,42,.45);
+    background:#181612;
+}
+
+.mvv-card:hover::before{
+    transform:scaleX(1);
+}
+
+.mvv-card i{
+    display:block;
+    margin-bottom:1.5rem;
+    font-size:1.8rem;
+    color:var(--gold-light);
+}
+
+.mvv-card h3{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:1.25rem;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:1rem;
+}
+
+.mvv-card p{
+    color:var(--text-muted);
+    font-size:.9rem;
+    line-height:1.8;
+    font-weight:300;
+    margin:0;
+}
+
+
+/* ------------------------------------------------------------
+   DIFERENCIAIS
+   ------------------------------------------------------------ */
+
+.empresa-diferenciais{
+    background:var(--dark-3);
+    padding:2rem 0;
+    border-top:1px solid var(--gold-dim);
+}
+
+.empresa-diferenciais .section-header{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 4rem;
+}
+
+.dif-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--gold-dim);
+    border:1px solid var(--gold-dim);
+}
+
+.dif-card{
+    min-height:180px;
+    padding:2.5rem 2rem;
+    background:var(--dark-3);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition:background .35s ease;
+}
+
+.dif-card:hover{
+    background:#181612;
+}
+
+.dif-card i{
+    color:var(--gold-light);
+    font-size:1.6rem;
+    margin-bottom:1.2rem;
+}
+
+.dif-card h4{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--white);
+    margin:0;
+}
+
+
+/* ------------------------------------------------------------
+   NOSSOS NÚMEROS
+   ------------------------------------------------------------ */
+
+.empresa-stats{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(196,154,42,.08),
+            transparent 55%
+        ),
+        var(--dark);
+    padding:2rem 0;
+    border-top:1px solid var(--gold-dim);
+    border-bottom:1px solid var(--gold-dim);
+}
+
+.stats-inner{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
+}
+
+.stat-item{
+    text-align:center;
+    padding:1rem;
+}
+
+.stat-item h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3.8rem;
+    line-height:1;
+    font-weight:600;
+    color:var(--gold-light);
+    margin:0 0 .7rem;
+}
+
+.stat-item p{
+    color:var(--text-muted);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    margin:0;
+}
+
+
+/* ------------------------------------------------------------
+   CTA FINAL DA EMPRESA
+   ------------------------------------------------------------ */
+
+.page-cta{
+    background:var(--dark-3);
+    padding:2rem 2rem;
+    border-top:1px solid var(--gold-dim);
+}
+
+.page-cta-content{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto;
+}
+
+.page-cta-content .section-eyebrow{
+    margin-bottom:1rem;
+}
+
+.page-cta-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.4rem,5vw,4rem);
+    line-height:1.1;
+    font-weight:600;
+    color:var(--white);
+    margin:0 0 1.2rem;
+}
+
+.page-cta-content p{
+    max-width:580px;
+    margin:0 auto 2rem;
+    color:var(--text-muted);
+    font-size:.95rem;
+    line-height:1.8;
+    font-weight:300;
+}
+
+.page-cta-content .btn-primary{
+    display:inline-block;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE — EMPRESA
+   ============================================================ */
+
+@media (max-width:900px){
+
+    .empresa-grid{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .empresa-text{
+        max-width:none;
+    }
+
+    .empresa-img img{
+        height:420px;
+    }
+
+    .mvv-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dif-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-inner{
+        grid-template-columns:repeat(2,1fr);
+        row-gap:3rem;
+    }
+
+}
+
+
+@media (max-width:700px){
+
+    .empresa-intro,
+    .empresa-historia,
+    .empresa-mvv,
+    .empresa-diferenciais{
+        padding:5rem 0;
+    }
+
+    .empresa-img img{
+        height:320px;
+    }
+
+    /* Timeline mobile */
+
+    .timeline{
+        padding-left:2rem;
+    }
+
+    .timeline::before{
+        left:5px;
+        transform:none;
+    }
+
+    .timeline-item{
+        display:block;
+        margin-bottom:3rem;
+        padding-left:2rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year{
+        text-align:left;
+        padding:0;
+        margin-bottom:.8rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content{
+        text-align:left;
+        padding:0;
+    }
+
+    .timeline-item::after{
+        left:0;
+        transform:translateX(-50%);
+    }
+
+    .dif-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-inner{
+        grid-template-columns:1fr 1fr;
+        gap:1rem;
+    }
+
+    .stat-item h2{
+        font-size:2.8rem;
+    }
+
+    .page-cta{
+        padding:5rem 1.5rem;
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .stats-inner{
+        grid-template-columns:1fr;
+    }
+
+    .stat-item{
+        padding:1rem 0;
+    }
+
+}
+
+/* ============================================================
+   DECORAÇÃO — MISSÃO, VISÃO E VALORES
+   ============================================================ */
+
+.empresa-mvv{
+    position:relative;
+    overflow:hidden;
+}
+
+.mvv-decoration{
+    position:absolute;
+    left:50%;
+    width:min(720px,70%);
+    height:1px;
+    transform:translateX(-50%);
+    background:linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(196,154,42,.15) 15%,
+        rgba(196,154,42,.55) 45%,
+        var(--gold-light) 50%,
+        rgba(196,154,42,.55) 55%,
+        rgba(196,154,42,.15) 85%,
+        transparent 100%
+    );
+}
+
+.mvv-decoration::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:7px;
+    height:7px;
+    background:var(--dark);
+    border:1px solid var(--gold-light);
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+
+.mvv-decoration-top{
+    top:2.5rem;
+}
+
+.mvv-decoration-bottom{
+    bottom:2.5rem;
+}
+
+/* ============================================================
+   MENU — PÁGINA ATIVA
+   ============================================================ */
+
+.nav-links li.active a{
+    color:var(--gold-light);
+    cursor:default;
+}
+
+.nav-links li.active a::after{
+    width:100%;
+}
+
+
+/* ============================================================
+   OUVIDORIA
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   INTRODUÇÃO
+   ------------------------------------------------------------ */
+
+.ouvidoria-intro{
+    background:var(--dark);
+    padding:5rem 1;
+}
+
+.ouvidoria-intro-content{
+    max-width:820px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.ouvidoria-intro-content .section-eyebrow{
+    margin-bottom:1rem;
+}
+
+.ouvidoria-intro-content .section-title{
+    margin-bottom:1.5rem;
+}
+
+.ouvidoria-intro-content p{
+    max-width:720px;
+    margin:0 auto 0rem;
+    color:var(--text-muted);
+    font-size:.95rem;
+    line-height:1.9;
+    font-weight:300;
+}
+
+
+/* ------------------------------------------------------------
+   TIPOS DE MANIFESTAÇÃO
+   ------------------------------------------------------------ */
+
+.ouvidoria-tipos{
+    background:var(--dark-3);
+    padding:0rem 1;
+    border-top:1px solid var(--gold-dim);
+    border-bottom:1px solid var(--gold-dim);
+}
+
+.ouvidoria-tipos .section-header{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 3.5rem;
+}
+
+.ouvidoria-tipos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--gold-dim);
+    border:1px solid var(--gold-dim);
+}
+
+.ouvidoria-tipo{
+    min-height:250px;
+    padding:2.5rem 1.8rem;
+    background:var(--dark-3);
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:
+        background .35s ease,
+        transform .35s ease;
+}
+
+.ouvidoria-tipo:hover{
+    background:#181612;
+    transform:translateY(-4px);
+}
+
+.ouvidoria-tipo i{
+    font-size:1.8rem;
+    color:var(--gold-light);
+    margin-bottom:1.4rem;
+}
+
+.ouvidoria-tipo h3{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:1.15rem;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--white);
+    margin:0 0 .8rem;
+}
+
+.ouvidoria-tipo p{
+    color:var(--text-muted);
+    font-size:.82rem;
+    line-height:1.7;
+    font-weight:300;
+    margin:0;
+}
+
+
+/* ------------------------------------------------------------
+   FORMULÁRIO
+   ------------------------------------------------------------ */
+
+.ouvidoria-form-section{
+    background:var(--dark);
+    padding:3rem 0;
+}
+
+.ouvidoria-form-header{
+    max-width:760px;
+    margin:0 auto 3rem;
+    text-align:center;
+}
+
+.ouvidoria-form-header .section-title{
+    margin-bottom:1rem;
+}
+
+.ouvidoria-form-header p{
+    color:var(--text-muted);
+    font-size:.9rem;
+    line-height:1.8;
+    margin:0;
+}
+
+.ouvidoria-form{
+    max-width:850px;
+    margin:0 auto;
+    padding:3rem;
+    background:var(--dark-3);
+    border:1px solid var(--gold-dim);
+}
+
+.ouvidoria-form .form-group{
+    margin-bottom:1.5rem;
+}
+
+.ouvidoria-form label{
+    display:flex;
+    align-items:center;
+    gap:.35rem;
+    margin-bottom:.6rem;
+    color:var(--white);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.ouvidoria-form label > span{
+    color:var(--gold-light);
+}
+
+.ouvidoria-form label small{
+    margin-left:.35rem;
+    color:var(--text-muted);
+    font-size:.65rem;
+    font-weight:400;
+    letter-spacing:.05em;
+}
+
+.ouvidoria-form input:not([type="checkbox"]),
+.ouvidoria-form select,
+.ouvidoria-form textarea{
+    width:100%;
+    border:1px solid rgba(234,226,208,.16);
+    border-radius:var(--radius);
+    background:#111;
+    color:var(--white);
+    font-family:'Barlow',sans-serif;
+    font-size:.9rem;
+    font-weight:300;
+    padding:.9rem 1rem;
+    outline:none;
+    transition:
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.ouvidoria-form textarea{
+    min-height:180px;
+    resize:vertical;
+    line-height:1.7;
+}
+
+.ouvidoria-form input:not([type="checkbox"]):focus,
+.ouvidoria-form select:focus,
+.ouvidoria-form textarea:focus{
+    border-color:var(--gold);
+    background:#15130f;
+}
+
+.ouvidoria-form input::placeholder,
+.ouvidoria-form textarea::placeholder{
+    color:rgba(234,226,208,.35);
+}
+
+.ouvidoria-form select{
+    appearance:auto;
+}
+
+.form-help{
+    margin:.6rem 0 0;
+    color:var(--text-muted);
+    font-size:.72rem;
+    line-height:1.6;
+}
+
+/* ============================================================
+   OUVIDORIA — CAMPOS E FORMULÁRIOS
+   ============================================================ */
+
+.ouvidoria-form input,
+.ouvidoria-form textarea,
+.ouvidoria-form select {
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.025);
+
+    color: var(--white);
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+}
+
+
+/* Estado ao passar o mouse */
+
+.ouvidoria-form input:hover,
+.ouvidoria-form textarea:hover,
+.ouvidoria-form select:hover {
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 1px rgba(196,154,42,.15),
+        0 0 18px rgba(196,154,42,.08);
+
+}
+
+
+/* Estado quando o campo recebe foco */
+
+.ouvidoria-form input:focus,
+.ouvidoria-form textarea:focus,
+.ouvidoria-form select:focus {
+
+    outline: none;
+
+    border-color: var(--gold-light);
+
+    box-shadow:
+        0 0 0 1px rgba(196,154,42,.25),
+        0 0 20px rgba(196,154,42,.10);
+
+}
+
+
+/* ------------------------------------------------------------
+   IDENTIFICAÇÃO OPCIONAL
+   ------------------------------------------------------------ */
+
+.ouvidoria-identificacao{
+    margin-top:2.5rem;
+    padding:2rem;
+    border:1px solid rgba(196,154,42,.18);
+    background:rgba(196,154,42,.025);
+}
+
+.ouvidoria-identificacao-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:1.8rem;
+}
+
+.ouvidoria-identificacao-header .section-eyebrow{
+    margin-bottom:.35rem;
+}
+
+.ouvidoria-identificacao-header h3{
+    margin:0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.8rem;
+    font-weight:600;
+    color:var(--white);
+}
+
+.optional-badge{
+    flex-shrink:0;
+    padding:.35rem .7rem;
+    border:1px solid var(--gold-dim);
+    color:var(--gold-light);
+    font-size:.62rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+
+.ouvidoria-form .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+}
+
+.anonymous-check{
+    display:flex !important;
+    align-items:center;
+    gap:.7rem !important;
+    margin-top:1.5rem;
+    margin-bottom:0 !important;
+    color:var(--text-muted) !important;
+    font-family:'Barlow',sans-serif !important;
+    font-size:.8rem !important;
+    font-weight:400 !important;
+    letter-spacing:0 !important;
+    text-transform:none !important;
+    cursor:pointer;
+}
+
+.anonymous-check input{
+    width:16px;
+    height:16px;
+    accent-color:var(--gold-light);
+    flex-shrink:0;
+}
+
+
+/* ------------------------------------------------------------
+   BOTÃO DE ENVIO
+   ------------------------------------------------------------ */
+
+.ouvidoria-submit{
+    display:flex;
+    justify-content:center;
+    margin-top:2.5rem;
+}
+
+.ouvidoria-submit .btn-primary{
+    min-width:230px;
+    text-align:center;
+}
+
+
+/* ------------------------------------------------------------
+   CONFIDENCIALIDADE
+   ------------------------------------------------------------ */
+
+.ouvidoria-confidencialidade{
+    background:var(--dark-3);
+    padding:1.5rem;
+    border-top:1px solid var(--gold-dim);
+}
+
+.confidencialidade-box{
+    max-width:900px;
+    margin:0 auto;
+    padding:3rem;
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:2rem;
+    align-items:center;
+    border:1px solid rgba(196,154,42,.25);
+    background:rgba(196,154,42,.035);
+}
+
+.confidencialidade-icon{
+    width:64px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--gold-dim);
+    color:var(--gold-light);
+    font-size:1.4rem;
+}
+
+.confidencialidade-text .section-eyebrow{
+    margin-bottom:.6rem;
+}
+
+.confidencialidade-text h2{
+    margin:0 0 .8rem;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    line-height:1.2;
+    font-weight:600;
+    color:var(--white);
+}
+
+.confidencialidade-text p{
+    margin:0;
+    color:var(--text-muted);
+    font-size:.88rem;
+    line-height:1.8;
+    font-weight:300;
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVIDADE — OUVIDORIA
+   ------------------------------------------------------------ */
+
+@media(max-width:900px){
+
+    .ouvidoria-tipos-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .ouvidoria-form{
+        padding:2.5rem;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .ouvidoria-intro,
+    .ouvidoria-tipos{
+        padding:4.5rem 0;
+    }
+
+    .ouvidoria-form-section{
+        padding:5rem 0;
+    }
+
+    .ouvidoria-tipos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ouvidoria-tipo{
+        min-height:210px;
+    }
+
+    .ouvidoria-form{
+        padding:1.5rem;
+    }
+
+    .ouvidoria-form .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .ouvidoria-identificacao{
+        padding:1.5rem;
+    }
+
+    .ouvidoria-identificacao-header{
+        align-items:flex-start;
+    }
+
+    .confidencialidade-box{
+        grid-template-columns:1fr;
+        padding:2rem;
+        text-align:center;
+    }
+
+    .confidencialidade-icon{
+        margin:0 auto;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .ouvidoria-form{
+        padding:1.2rem;
+    }
+
+    .ouvidoria-identificacao{
+        padding:1.2rem;
+    }
+
+    .ouvidoria-identificacao-header{
+        flex-direction:column;
+    }
+
+    .ouvidoria-submit .btn-primary{
+        width:100%;
+    }
+
+}
+
+/* ============================================================
+   TRABALHE CONOSCO
+   ============================================================ */
+
+
+/* ============================================================
+   INTRODUÇÃO
+   ============================================================ */
+
+.trabalhe-intro{
+    background:var(--dark);
+    padding:5rem 0;
+}
+
+.trabalhe-intro-content{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.trabalhe-intro-content .section-eyebrow{
+    margin-bottom:1.2rem;
+}
+
+.trabalhe-intro-content .section-title{
+    margin-bottom:1.5rem;
+}
+
+.trabalhe-intro-content p{
+    max-width:760px;
+    margin:0 auto 1rem;
+    color:var(--text-muted);
+    font-size:1rem;
+    line-height:1.85;
+}
+
+.trabalhe-intro-content p:last-child{
+    margin-bottom:0;
+}
+
+
+/* ============================================================
+   CABEÇALHO DAS SEÇÕES
+   ============================================================ */
+
+.trabalhe-section-header{
+    max-width:760px;
+    margin:0 auto 3.5rem;
+    text-align:center;
+}
+
+.trabalhe-section-header .section-eyebrow{
+    margin-bottom:1rem;
+}
+
+.trabalhe-section-header .section-title{
+    margin-bottom:1rem;
+}
+
+.trabalhe-section-header .section-body{
+    max-width:650px;
+    margin:0 auto;
+}
+
+
+/* ============================================================
+   VAGAS DISPONÍVEIS
+   ============================================================ */
+
+.trabalhe-vagas{
+    background:var(--dark-2);
+    padding:6rem 0;
+}
+
+.vagas-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+
+.vaga-card{
+    position:relative;
+    background:var(--dark-3);
+    border:1px solid rgba(196,154,42,.14);
+    padding:2rem;
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+    transition:
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.vaga-card:hover{
+    border-color:rgba(196,154,42,.55);
+    transform:translateY(-5px);
+    box-shadow:0 14px 40px rgba(0,0,0,.25);
+}
+
+.vaga-card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:1.5rem;
+}
+
+.vaga-status{
+    display:inline-block;
+    padding:.35rem .7rem;
+    border:1px solid var(--gold-dim);
+    color:var(--gold-light);
+    font-size:.62rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.vaga-icon{
+    color:var(--gold-light);
+    font-size:1.2rem;
+}
+
+.vaga-card h3{
+    font-family:'Barlow Condensed',sans-serif;
+    color:var(--white);
+    font-size:1.35rem;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    margin-bottom:.8rem;
+}
+
+.vaga-card p{
+    color:var(--text-muted);
+    font-size:.9rem;
+    line-height:1.7;
+    margin-bottom:1.5rem;
+}
+
+.vaga-link{
+    margin-top:auto;
+    color:var(--gold-light);
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+.vaga-link span{
+    display:inline-block;
+    margin-left:.4rem;
+    transition:.3s ease;
+}
+
+.vaga-link:hover{
+    color:var(--gold-pale);
+}
+
+.vaga-link:hover span{
+    transform:translateX(4px);
+}
+
+/* ============================================================
+   BANNER — CARREIRA / PARALLAX
+   ============================================================ */
+
+.trabalhe-banner{
+
+    position:relative;
+
+    width:100%;
+
+    height:280px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.trabalhe-banner-bg{
+
+    position:absolute;
+
+    inset:-12% 0;
+
+    background:url("../images/banner-trabalhe-conosco.png")
+               center center / cover no-repeat;
+
+    transform:scale(1.05);
+
+    will-change:transform;
+
+}
+
+.trabalhe-banner-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,10,10,.82),
+            rgba(10,10,10,.48),
+            rgba(10,10,10,.82)
+        );
+
+}
+
+.trabalhe-banner-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.trabalhe-banner-content .section-eyebrow{
+
+    margin-bottom:.8rem;
+
+}
+
+.trabalhe-banner-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(2.2rem,4vw,3.6rem);
+
+    line-height:1;
+
+    font-weight:500;
+
+    color:var(--white);
+
+}
+
+.trabalhe-banner-content h2 em{
+
+    color:var(--gold-light);
+
+    font-style:italic;
+
+}
+
+/* ============================================================
+   FUTURAS OPORTUNIDADES
+   ============================================================ */
+
+.trabalhe-futuras{
+    background:var(--dark);
+    padding:6rem 0;
+}
+
+.trabalhe-futuras-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:4rem;
+    align-items:center;
+}
+
+.trabalhe-futuras-content{
+    max-width:700px;
+}
+
+.trabalhe-futuras-content .section-title{
+    margin-bottom:1.5rem;
+}
+
+.trabalhe-futuras-content p{
+    color:var(--text-muted);
+    font-size:.95rem;
+    line-height:1.8;
+    margin-bottom:1rem;
+}
+
+.trabalhe-futuras-content .btn-primary{
+    margin-top:1.2rem;
+}
+
+.trabalhe-futuras-highlight{
+    min-height:300px;
+    border:1px solid rgba(196,154,42,.22);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(196,154,42,.08),
+            rgba(196,154,42,.015)
+        );
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:3rem;
+    position:relative;
+}
+
+.trabalhe-futuras-highlight::before,
+.trabalhe-futuras-highlight::after{
+    content:'';
+    position:absolute;
+    width:55px;
+    height:1px;
+    background:var(--gold);
+    opacity:.5;
+}
+
+.trabalhe-futuras-highlight::before{
+    top:25px;
+    left:25px;
+}
+
+.trabalhe-futuras-highlight::after{
+    bottom:25px;
+    right:25px;
+}
+
+.future-icon{
+    width:64px;
+    height:64px;
+    border:1px solid var(--gold-dim);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-light);
+    font-size:1.2rem;
+    margin-bottom:1.5rem;
+}
+
+.trabalhe-futuras-highlight strong{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.9rem;
+    line-height:1.2;
+    font-weight:500;
+    color:var(--white);
+}
+
+
+/* ============================================================
+   BANCO DE TALENTOS
+   ============================================================ */
+
+.trabalhe-talentos{
+    background:var(--dark-2);
+    padding:5rem 0;
+}
+
+.talentos-box{
+    position:relative;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:2rem;
+    padding:3rem;
+    border:1px solid rgba(196,154,42,.18);
+    background:var(--dark-3);
+}
+
+.talentos-icon{
+    width:70px;
+    height:70px;
+    border:1px solid var(--gold-dim);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-light);
+    font-size:1.4rem;
+}
+
+.talentos-content .section-eyebrow{
+    margin-bottom:.7rem;
+}
+
+.talentos-content h2{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--white);
+    font-size:2rem;
+    font-weight:500;
+    margin-bottom:.7rem;
+}
+
+.talentos-content p{
+    max-width:720px;
+    color:var(--text-muted);
+    font-size:.9rem;
+    line-height:1.75;
+}
+
+
+/* ============================================================
+   FORMULÁRIO DE CANDIDATURA
+   ============================================================ */
+
+.trabalhe-candidatura{
+    background:var(--dark);
+    padding:7rem 0;
+}
+
+.trabalhe-form{
+    max-width:900px;
+    margin:0 auto;
+    padding:3rem;
+    background:var(--dark-3);
+    border:1px solid rgba(196,154,42,.12);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem;
+    margin-bottom:1.5rem;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:.55rem;
+    margin-bottom:1.5rem;
+}
+
+.form-grid .form-group{
+    margin-bottom:0;
+}
+
+.form-group label{
+    color:var(--text-light);
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    padding:.95rem 1rem;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.025);
+
+    color:var(--white);
+
+    font-family:'Barlow',sans-serif;
+
+    font-size:.9rem;
+
+    border-radius:0;
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.form-group select{
+    cursor:pointer;
+}
+
+/* ============================================================
+   ÁREA DE INTERESSE — OPÇÕES DO SELECT
+   ============================================================ */
+
+.form-group select option{
+
+    background:#1b1b18;
+
+    color:#e8e3d8;
+
+}
+
+.form-group select option:checked{
+
+    background:#3a3525;
+
+    color:var(--gold-light);
+
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:rgba(234,226,208,.35);
+}
+
+
+/* Hover */
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover{
+    border-color:var(--gold);
+    box-shadow:
+        0 0 0 1px rgba(196,154,42,.12),
+        0 0 18px rgba(196,154,42,.06);
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    outline:none;
+    border-color:var(--gold-light);
+    background:rgba(196,154,42,.025);
+    box-shadow:
+        0 0 0 1px rgba(196,154,42,.2),
+        0 0 20px rgba(196,154,42,.08);
+}
+
+
+/* ============================================================
+   UPLOAD DO CURRÍCULO
+   ============================================================ */
+
+.file-upload{
+    position:relative;
+}
+
+.file-upload input[type="file"]{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    cursor:pointer;
+    z-index:2;
+}
+
+.file-upload-content{
+    min-height:150px;
+    border:1px dashed rgba(196,154,42,.25);
+    background:rgba(255,255,255,.02);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:.5rem;
+    transition:
+        border-color .35s ease,
+        background .35s ease;
+}
+
+.file-upload-content i{
+    color:var(--gold-light);
+    font-size:1.6rem;
+    margin-bottom:.3rem;
+}
+
+.file-upload-content strong{
+    color:var(--white);
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.file-upload-content span{
+    color:var(--text-muted);
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.file-upload:hover .file-upload-content{
+    border-color:var(--gold);
+    background:rgba(196,154,42,.035);
+}
+
+
+/* ============================================================
+   BOTÃO DE ENVIO
+   ============================================================ */
+
+.form-submit{
+    display:flex;
+    justify-content:center;
+    margin-top:.5rem;
+}
+
+.form-submit .btn-primary{
+    display:inline-flex;
+    align-items:center;
+    gap:.7rem;
+}
+
+.form-submit .btn-primary i{
+    transition:.3s ease;
+}
+
+.form-submit .btn-primary:hover i{
+    transform:translateX(4px);
+}
+
+
+/* ============================================================
+   AVISO DA CANDIDATURA
+   ============================================================ */
+
+.candidatura-notice{
+    max-width:900px;
+    justify-content:center;
+    margin:1.5rem auto 0;
+    display:flex;
+    align-items:flex-start;
+    gap:.8rem;
+    color:var(--text-muted);
+}
+
+.candidatura-notice i{
+    color:var(--gold-light);
+    margin-top:.2rem;
+}
+
+.candidatura-notice p{
+    font-size:.95rem;
+    line-height:1.0;
+    margin:0;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width:900px){
+
+    .vagas-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trabalhe-futuras-grid{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .talentos-box{
+        grid-template-columns:auto 1fr;
+    }
+
+    .talentos-box .btn-primary{
+        grid-column:1 / -1;
+        justify-self:start;
+    }
+
+}
+
+
+@media (max-width:640px){
+
+    .trabalhe-intro,
+    .trabalhe-vagas,
+    .trabalhe-futuras,
+    .trabalhe-talentos,
+    .trabalhe-candidatura{
+        padding:4rem 0;
+    }
+
+    .vagas-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trabalhe-futuras-highlight{
+        min-height:240px;
+    }
+
+    .talentos-box{
+        grid-template-columns:1fr;
+        padding:2rem;
+    }
+
+    .talentos-icon{
+        width:58px;
+        height:58px;
+    }
+
+    .trabalhe-form{
+        padding:1.5rem;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .form-grid .form-group{
+        margin-bottom:1.5rem;
+    }
+
+    .candidatura-notice{
+        padding:0 .5rem;
+    }
+
+}
+
+/* ============================================================
+   TRABALHE CONOSCO — DIVISORES EDITORIAIS
+   ============================================================ */
+
+.trabalhe-divider{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:720px;
+
+    height:1px;
+
+    margin:70px auto;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        var(--gold-dim) 20%,
+        var(--gold-light) 50%,
+        var(--gold-dim) 80%,
+        transparent
+    );
+
+}
+
+
+/* Marcador central */
+
+.trabalhe-divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:7px;
+    height:7px;
+
+    background:var(--dark);
+
+    border:1px solid var(--gold-light);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+}
+
+/* ============================================================
+   PÁGINAS INDIVIDUAIS DE SERVIÇOS
+   TEMPLATE BASE
+   ============================================================ */
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.servico-page-hero{
+
+    position:relative;
+
+    min-height:58vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+.servico-page-hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:url("../images/hero-servicos.jpg");
+
+    background-position:center center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    transform:scale(1.05);
+
+    animation:heroZoom 18s ease-in-out infinite alternate;
+
+}
+
+
+.servico-page-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(8,8,8,.82),
+            rgba(8,8,8,.58),
+            rgba(8,8,8,.82)
+        );
+
+}
+
+
+.servico-page-hero-content{
+
+    position:relative;
+
+    z-index:3;
+
+    width:100%;
+
+    max-width:900px;
+
+    padding:7rem 2rem;
+
+    text-align:center;
+
+}
+
+
+.servico-page-title{
+
+    margin:0 0 1.5rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    font-weight:500;
+
+    line-height:1;
+
+    color:white;
+
+}
+
+
+.servico-page-subtitle{
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    color:var(--text-muted);
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+}
+
+
+/* ============================================================
+   INTRODUÇÃO
+   ============================================================ */
+
+.servico-page-intro{
+
+    background:var(--dark);
+
+    padding:7rem 0;
+
+}
+
+
+.servico-page-intro-grid{
+
+    display:grid;
+
+    grid-template-columns:.8fr 1.2fr;
+
+    gap:6rem;
+
+    align-items:start;
+
+}
+
+
+.servico-page-intro-heading{
+
+    position:relative;
+
+}
+
+
+.servico-page-intro-heading::before{
+
+    content:"";
+
+    display:block;
+
+    width:55px;
+
+    height:1px;
+
+    margin-bottom:1.5rem;
+
+    background:var(--gold-light);
+
+}
+
+
+.servico-page-intro-text{
+
+    max-width:760px;
+
+}
+
+
+.servico-page-intro-text p{
+
+    margin:0 0 1.5rem;
+
+    color:var(--text-muted);
+
+    font-size:1rem;
+
+    line-height:1.95;
+
+}
+
+
+.servico-page-intro-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* ============================================================
+   BANNER VISUAL
+   ============================================================ */
+
+.servico-page-banner{
+
+    position:relative;
+
+    min-height:380px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+.servico-page-banner-image{
+
+    position:absolute;
+
+    top:-12%;
+
+    left:0;
+
+    width:100%;
+
+    height:124%;
+
+    background-image:url("../images/banner-servicos.jpg");
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    transform:scale(1.03);
+
+}
+
+
+.servico-page-banner-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(8,8,8,.82),
+            rgba(8,8,8,.45),
+            rgba(8,8,8,.82)
+        );
+
+}
+
+
+.servico-page-banner-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:900px;
+
+    padding:6rem 2rem;
+
+    text-align:center;
+
+}
+
+
+.servico-page-banner-content h2{
+
+    margin:1rem 0 0;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    color:white;
+
+}
+
+
+.servico-page-banner-content h2 em{
+
+    color:var(--gold-light);
+
+}
+
+
+/* ============================================================
+   ÁREAS / SERVIÇOS
+   ============================================================ */
+
+.servico-page-areas{
+
+    background:var(--dark-2);
+
+    padding:7rem 0;
+
+}
+
+
+.servico-page-section-header{
+
+    max-width:760px;
+
+    margin:0 auto 4rem;
+
+    text-align:center;
+
+}
+
+
+.servico-page-section-header .section-body{
+
+    max-width:650px;
+
+    margin:1.5rem auto 0;
+
+    color:var(--text-muted);
+
+    line-height:1.8;
+
+}
+
+
+.servico-page-area-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:1.5rem;
+
+}
+
+
+.servico-area-card{
+
+    position:relative;
+
+    padding:2.5rem;
+
+    background:rgba(255,255,255,.018);
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+.servico-area-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(196,154,42,.45);
+
+    background:rgba(196,154,42,.025);
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+.servico-area-number{
+
+    position:absolute;
+
+    top:1.5rem;
+
+    right:1.5rem;
+
+    color:rgba(196,154,42,.35);
+
+    font-family:'Barlow Condensed',sans-serif;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+}
+
+
+.servico-area-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:1.5rem;
+
+    border:1px solid rgba(196,154,42,.3);
+
+    color:var(--gold-light);
+
+    font-size:1rem;
+
+}
+
+
+.servico-area-card h3{
+
+    margin:0 0 1rem;
+
+    color:white;
+
+    font-family:'Barlow Condensed',sans-serif;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+    text-transform:uppercase;
+
+}
+
+
+.servico-area-card p{
+
+    margin:0 0 1.5rem;
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
+
+    line-height:1.8;
+
+}
+
+
+.servico-area-card ul{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+.servico-area-card li{
+
+    position:relative;
+
+    padding-left:1.2rem;
+
+    margin-bottom:.65rem;
+
+    color:var(--text-light);
+
+    font-size:.82rem;
+
+    line-height:1.6;
+
+}
+
+
+.servico-area-card li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:.65em;
+
+    width:4px;
+
+    height:4px;
+
+    background:var(--gold-light);
+
+    transform:rotate(45deg);
+
+}
+
+
+/* ============================================================
+   DIFERENCIAIS / BENEFÍCIOS
+   ============================================================ */
+
+.servico-page-benefits{
+
+    background:var(--dark);
+
+    padding:7rem 0;
+
+}
+
+
+.servico-page-benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:6rem;
+
+    align-items:center;
+
+}
+
+
+.servico-page-benefits-content{
+
+    max-width:620px;
+
+}
+
+
+.servico-page-benefits-content > p{
+
+    margin:1.5rem 0 0;
+
+    color:var(--text-muted);
+
+    line-height:1.9;
+
+}
+
+
+.servico-benefits-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+}
+
+
+.servico-benefit-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    padding:1.2rem 1.4rem;
+
+    background:rgba(255,255,255,.018);
+
+    border-left:1px solid rgba(196,154,42,.35);
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+    transition:
+
+        background .3s ease,
+
+        border-color .3s ease,
+
+        transform .3s ease;
+
+}
+
+
+.servico-benefit-item:hover{
+
+    transform:translateX(5px);
+
+    background:rgba(196,154,42,.035);
+
+    border-color:var(--gold-light);
+
+}
+
+
+.servico-benefit-check{
+
+    flex-shrink:0;
+
+    width:24px;
+
+    height:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--gold-light);
+
+    border:1px solid rgba(196,154,42,.35);
+
+    font-size:.7rem;
+
+}
+
+
+/* ============================================================
+   CTA
+   ============================================================ */
+
+.servico-page-cta{
+
+    position:relative;
+
+    background:var(--dark-3);
+
+    padding:7rem 0;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+
+.servico-page-cta-content{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+
+.servico-page-cta-content h2{
+
+    margin:1rem 0 1.5rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    color:white;
+
+}
+
+
+.servico-page-cta-content h2 em{
+
+    color:var(--gold-light);
+
+}
+
+
+.servico-page-cta-content p{
+
+    max-width:600px;
+
+    margin:0 auto 2rem;
+
+    color:var(--text-muted);
+
+    line-height:1.8;
+
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media(max-width:900px){
+
+    .servico-page-intro-grid{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+
+    .servico-page-area-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .servico-page-benefits-grid{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .servico-page-hero-content{
+
+        padding:5rem 1.5rem;
+
+    }
+
+
+    .servico-page-title{
+
+        font-size:clamp(2.7rem,12vw,4rem);
+
+    }
+
+
+    .servico-page-intro,
+    .servico-page-areas,
+    .servico-page-benefits,
+    .servico-page-cta{
+
+        padding:5rem 0;
+
+    }
+
+
+    .servico-page-area-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .servico-area-card{
+
+        padding:2rem;
+
+    }
+
+
+    .servico-page-banner{
+
+        min-height:320px;
+
+    }
+
+}
+
+/* ============================================================
+   ENGENHARIA & SERVIÇOS
+============================================================ */
+
+.pagina-engenharia .servico-page-hero-bg{
+
+    background-image:url("../images/servico-engenharia-projetos-01.png");
+
+}
+
+.pagina-engenharia .servico-page-banner-image{
+
+    background-image:url("../images/banner-engenharia.png");
+
+}
+
+/* ============================================================
+   CALDEIRARIA | USINAGEM | INSPEÇÃO
+============================================================ */
+
+.pagina-caldeiraria .servico-page-hero-bg{
+
+    background-image:url("../images/servico-calderaria-usinagem-inspecao.png");
+
+}
+
+.pagina-caldeiraria .servico-page-banner-image{
+
+    background-image:url("../images/banner-caldeiraria.png");
+
+}
+
+/* ============================================================
+   DADOS | GESTÃO | PERFORMANCE
+============================================================ */
+
+.pagina-dados .servico-page-hero-bg{
+
+    background-image:url("../images/servico-dados-gestao-performance.png");
+
+}
+
+
+.pagina-dados .servico-page-banner-image{
+
+    background-image:url("../images/banner-dados.png");
+
+}
+
+/* ============================================================
+   OFFSHORE | ONSHORE | INDUSTRIAL
+============================================================ */
+
+.pagina-offshore .servico-page-hero-bg{
+
+    background-image:url("../images/servico-onshore-offshore-industrial.png");
+
+}
+
+
+.pagina-offshore .servico-page-banner-image{
+
+    background-image:url("../images/banner-offshore.png");
+
+}
+
+/* ============================================================
+   CONSULTORIA AMBIENTAL
+============================================================ */
+
+.pagina-ambiental .servico-page-hero-bg{
+
+    background-image:url("../images/servico-consultoria-ambiental.png");
+
+}
+
+
+.pagina-ambiental .servico-page-banner-image{
+
+    background-image:url("../images/banner-ambiental.png");
+
+}
+
+/* ============================================================
+   SMS & CONFORMIDADE
+============================================================ */
+
+.pagina-sms .servico-page-hero-bg{
+
+    background-image:url("../images/servico-sms-conformidade.png");
+
+}
+
+
+.pagina-sms .servico-page-banner-image{
+
+    background-image:url("../images/banner-sms.png");
+
+}
+
+/* ============================================================
+   FOOTER — SERVIÇO ATIVO
+============================================================ */
+
+.footer-service-active{
+
+    color:var(--gold-light);
+
+    font-weight:700;
+
+    cursor:default;
+
+    text-decoration:none;
+
+}

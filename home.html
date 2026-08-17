@@ -33,13 +33,58 @@
   </div>
 
   <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#dashboard">Resultados</a></li>
-    <li><a href="#clientes">Clientes</a></li>
-    <li><a href="#valores">Valores</a></li>
-    <li><a href="#contato" class="nav-cta">Fale conosco</a></li>
-  </ul>
+
+  <li class="active">
+    <a href="javascript:void(0);" aria-current="page">
+        Home
+    </a>
+</li>
+
+  <li><a href="pages/empresa.html">Empresa</a></li>
+
+  <li class="dropdown">
+
+    <a href="#">
+
+        Serviços
+
+        <span class="dropdown-arrow">▾</span>
+
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li class="dropdown-title">
+            <a href="#servicos">
+                Todos os Serviços
+            </a>
+        </li>
+
+        <li class="dropdown-divider"></li>
+
+        <li><a href="pages/engenharia-servicos.html">Engenharia & Serviços</a></li>
+
+        <li><a href="pages/caldeiraria-usinagem-inspecao.html">Caldeiraria | Usinagem | Inspeção</a></li>
+
+        <li><a href="pages/dados-gestao-performance.html">Dados | Gestão | Performance</a></li>
+
+        <li><a href="pages/offshore-onshore-industrial.html">Offshore | Onshore | Industrial</a></li>
+
+        <li><a href="pages/consultoria-ambiental.html">Consultoria Ambiental</a></li>
+
+        <li><a href="pages/sms-conformidade.html">SMS & Conformidade</a></li>
+
+    </ul>
+
+</li>
+
+  <li><a href="pages/trabalhe-conosco.html">Trabalhe Conosco</a></li>
+
+  <li><a href="pages/ouvidoria.html">Ouvidoria</a></li>
+
+  <li><a href="#contato" class="nav-cta">Fale conosco</a></li>
+
+</ul>
 
   <div class="nav-social">
 
@@ -66,34 +111,46 @@
 </nav>
 
 <!-- ============================================================
-     HERO — fullscreen image com zoom suave
-     [SUBSTITUIR] src da .hero-bg pelo banner do cliente
+     HERO — fullscreen image
      ============================================================ -->
 <section id="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
 
-    <source src="assets/videos/hero.mp4" type="video/mp4">
+    <div class="hero-image"></div>
 
-</video>
-  <div class="hero-overlay"></div>
-  <div class="hero-grid-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">New Flux Ltda.</div>
-    <h1 class="hero-h1">Soluções<br><em>transformando</em><br>resultados</h1>
-    <p class="hero-sub">Da engenharia à execução, oferecemos soluções em Serviços, Caldeiraria e Usinagem para projetos de médio e grande porte, com eficiência, qualidade e total compromisso com os prazos.</p>
-    <div class="hero-btns">
-      <a href="#servicos" class="btn-primary">Nossas soluções</a>
-      <a href="#contato" class="btn-ghost">Fale com a gente</a>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-eyebrow">New Flux Ltda.</div>
+
+        <h1 class="hero-h1">
+            Soluções<br>
+            <em>transformando</em><br>
+            resultados
+        </h1>
+
+        <p class="hero-sub">
+            Da engenharia à execução, oferecemos soluções em Serviços,
+            Caldeiraria e Usinagem para projetos de médio e grande porte,
+            com eficiência, qualidade e total compromisso com os prazos.
+        </p>
+
+        <div class="hero-btns">
+            <a href="#servicos" class="btn-primary">Nossas soluções</a>
+            <a href="#contato" class="btn-ghost">Fale com a gente</a>
+        </div>
+
+        <div class="hero-iso">
+            <img src="assets/images/ISO-9001.png" alt="ISO 9001">
+            <img src="assets/images/ISO-14001.png" alt="ISO 14001">
+            <img src="assets/images/ISO-45001.png" alt="ISO 45001">
+        </div>
     </div>
-    <div class="hero-iso">
-    <img src="assets/images/ISO-9001.png" alt="ISO 9001">
-    <img src="assets/images/ISO-14001.png" alt="ISO 14001">
-    <img src="assets/images/ISO-45001.png" alt="ISO 45001">
-</div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-  </div>
+
+    <div class="hero-scroll">
+        <div class="scroll-line"></div>
+    </div>
+
 </section>
 
 <!-- ============================================================
@@ -194,130 +251,118 @@
   </div>
 
   <!-- Serviço 01 -->
-  <div class="servico-row reveal">
+  <a href="pages/engenharia-servicos.html" class="servico-row reveal">
     <div class="servico-row-img">
       <!-- [IMG] Foto de engenharia e projetos -->
-      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+      <img src="assets/images/servico-engenharia-projetos-01.png"/>
       <div class="servico-row-img-overlay"></div>
-      <div class="servico-row-num">01</div>
     </div>
     <div class="servico-row-content">
       <div class="section-eyebrow">Serviço</div>
       <div class="servico-row-title">Engenharia & Projetos</div>
       <p class="servico-row-desc">Engenheiros de projetos, integração, cronograma, riscos e suporte técnico especializado.</p>
-      <div class="servico-row-tags">
-        <span class="stag">PMI / PMO</span>
-        <span class="stag">Cronograma</span>
-        <span class="stag">Custo</span>
-        <span class="stag">Risco</span>
-      </div>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
     </div>
-  </div>
+  </a>
 
   <!-- Serviço 02 -->
-  <div class="servico-row reveal">
+  <a href="pages/caldeiraria-usinagem-inspecao.html" class="servico-row reveal">
     <div class="servico-row-img">
       <!-- [IMG] Foto de caldeiraria -->
-      <img src="https://plus.unsplash.com/premium_photo-1664299315636-ba32b3df7a96?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+      <img src="assets/images/servico-calderaria-usinagem-inspecao.png"/>
       <div class="servico-row-img-overlay"></div>
-      <div class="servico-row-num">02</div>
     </div>
     <div class="servico-row-content">
       <div class="section-eyebrow">Serviço</div>
-      <div class="servico-row-title">Calderaria | Serviços | Usinagem</div>
+      <div class="servico-row-title">Calderaria | Usinagem | Inspeção</div>
       <p class="servico-row-desc">Para projetos de médio e grande porte, entregamos serviços com elevado padrão de qualidade, precisão técnica e excelência operacional.</p>
-      <div class="servico-row-tags">
-        <span class="stag">Básico</span>
-        <span class="stag">Detalhamento</span>
-        <span class="stag">As-built</span>
-        <span class="stag">HAZOP</span>
-      </div>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
     </div>
-  </div>
+  </a>
 
   <!-- Serviço 03 -->
-  <div class="servico-row reveal">
+  <a href="pages/dados-gestao-performance.html" class="servico-row reveal">
     <div class="servico-row-img">
       <!-- [IMG] Foto de Dados e Gestão -->
-      <img src="https://plus.unsplash.com/premium_photo-1661602120241-2362dc35c256?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+      <img src="assets/images/servico-dados-gestao-performance.png"/>
       <div class="servico-row-img-overlay"></div>
-      <div class="servico-row-num">03</div>
     </div>
     <div class="servico-row-content">
       <div class="section-eyebrow">Serviço</div>
       <div class="servico-row-title">Dados | Gestão | Performance</div>
       <p class="servico-row-desc">Analistas de dados, gestão, processos, gastos de parcerias e inteligência para decisão.</p>
-      <div class="servico-row-tags">
-        <span class="stag">Diagnóstico</span>
-        <span class="stag">Otimização</span>
-        <span class="stag">Conformidade</span>
-        <span class="stag">Manutenção</span>
-      </div>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
     </div>
-  </div>
+  </a>
 
   <!-- Serviço 04 -->
-  <div class="servico-row reveal">
+  <a href="pages/offshore-onshore-industrial.html" class="servico-row reveal">
     <div class="servico-row-img">
       <!-- [IMG] Foto de óleo e gás -->
-      <img src="https://plus.unsplash.com/premium_photo-1661964136447-676beb97b303?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+      <img src="assets/images/servico-onshore-offshore-industrial.png"/>
       <div class="servico-row-img-overlay"></div>
-      <div class="servico-row-num">04</div>
     </div>
     <div class="servico-row-content">
       <div class="section-eyebrow">Serviço</div>
-      <div class="servico-row-title">OIL & GAS | INDUSTRIAL</div>
+      <div class="servico-row-title">OFFSHORE | ONSHORE | INDUSTRIAL</div>
       <p class="servico-row-desc">Acesso por cordas, montagem de andaimes, manutenção, pintura, inspeções e apoio operacional.</p>
-      <div class="servico-row-tags">
-        <span class="stag">NR-10</span>
-        <span class="stag">NR-35</span>
-        <span class="stag">Auditorias</span>
-        <span class="stag">SSMA</span>
-      </div>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
     </div>
-  </div>
+  </a>
 
     <!-- Serviço 05 -->
-  <div class="servico-row reveal">
+  <a href="pages/consultoria-ambiental.html" class="servico-row reveal">
     <div class="servico-row-img">
       <!-- [IMG] Foto de consultoria ambiental -->
-      <img src="https://plus.unsplash.com/premium_photo-1664478317691-151d74203b55?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+      <img src="assets/images/servico-consultoria-ambiental.png"/>
       <div class="servico-row-img-overlay"></div>
-      <div class="servico-row-num">05</div>
     </div>
     <div class="servico-row-content">
       <div class="section-eyebrow">Serviço</div>
       <div class="servico-row-title">CONSULTORIA AMBIENTAL</div>
       <p class="servico-row-desc">Licenciamento, EIA / RIMA, PGRS, meio biótico, PRAD, conformidade e valor ESG.</p>
-      <div class="servico-row-tags">
-        <span class="stag">NR-10</span>
-        <span class="stag">NR-35</span>
-        <span class="stag">Auditorias</span>
-        <span class="stag">SSMA</span>
-      </div>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
     </div>
-  </div>
+  </a>
 
     <!-- Serviço 06 -->
-  <div class="servico-row reveal">
+  <a href="pages/sms-conformidade.html" class="servico-row reveal">
     <div class="servico-row-img">
       <!-- [IMG] Foto de SMS e Conformidade -->
-      <img src="https://plus.unsplash.com/premium_photo-1661538877253-0a70c980f20c?q=80&w=904&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+      <img src="assets/images/servico-sms-conformidade.png"/>
       <div class="servico-row-img-overlay"></div>
-      <div class="servico-row-num">06</div>
     </div>
     <div class="servico-row-content">
       <div class="section-eyebrow">Serviço</div>
       <div class="servico-row-title">SMS & CONFORMIDADE</div>
       <p class="servico-row-desc">Análise de riscos, auditorias, higiene ocupacional, meio ambiente e gestão de segurança.</p>
-      <div class="servico-row-tags">
-        <span class="stag">NR-10</span>
-        <span class="stag">NR-35</span>
-        <span class="stag">Auditorias</span>
-        <span class="stag">SSMA</span>
-      </div>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
     </div>
-  </div>
+  </a>
 </section>
 
 <!-- ============================================================
@@ -496,49 +541,6 @@
 </div>
 
 <!-- ============================================================
-     GALERIA
-     [SUBSTITUIR] imagens pelas fotos reais da operação do cliente
-     ============================================================ -->
-<section id="clientes">
-  <div class="container">
-    <div class="galeria-header reveal">
-      <div class="section-eyebrow">Nossos Ativos</div>
-      <h2 class="section-title">Com quem <em>trabalhamos</em></h2>
-      <div class="gold-line"></div>
-    </div>
-  </div>
-  <div class="container--wide">
-    <div class="galeria-grid reveal">
-      <!-- [IMG] -->
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1726731782158-fcf6822b6ca4?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        <div class="gal-item-overlay"><span class="gal-item-label">Cliente 1</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1604282742204-1e7bb6ffbd9f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        <div class="gal-item-overlay"><span class="gal-item-label">Cliente 2</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://plus.unsplash.com/premium_photo-1661898205432-d648667b9c76?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        <div class="gal-item-overlay"><span class="gal-item-label">Cliente 3</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=900&q=75&fit=crop" alt="Refinaria" loading="lazy"/>
-        <div class="gal-item-overlay"><span class="gal-item-label">Cliente 4</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1541888894402-f3b1af908be4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        <div class="gal-item-overlay"><span class="gal-item-label">Cliente 5</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=75&fit=crop" alt="Equipe em projeto" loading="lazy"/>
-        <div class="gal-item-overlay"><span class="gal-item-label">Cliente 6</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      VALORES — ACTION
      ============================================================ -->
 <section id="valores">
@@ -638,7 +640,7 @@
       <div class="dif-imgs reveal-right">
         <!-- [IMG] Fotos de diferenciais da empresa -->
         <div class="dif-img dif-img--tall">
-          <img src="https://plus.unsplash.com/premium_photo-1661962514398-67972a27208d?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+          <img src="assets/images/diferenciais-foto-01.png"/>
         </div>
         <div class="dif-img dif-img--sm">
           <img src="https://plus.unsplash.com/premium_photo-1682126196145-d23f2022a8dd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
@@ -664,7 +666,7 @@
         <p class="section-body">Tem um projeto em mente ou quer conhecer melhor nossas soluções? Nossa equipe está pronta para atender você com agilidade e profissionalismo.</p>
         <div class="contato-info-list">
           <!-- [SUBSTITUIR] dados de contato reais do cliente -->
-          <div class="cinfo-item"><div class="cinfo-label">E-mails</div><div class="cinfo-val">fiscal@newflux.eng.br / diretoria@newflux.eng.br</div></div>
+          <div class="cinfo-item"><div class="cinfo-label">E-mails</div><div class="cinfo-val">diretoria@newflux.eng.br / fiscal@newflux.eng.br</div></div>
           <div class="cinfo-item"><div class="cinfo-label">Telefone / WhatsApp</div><div class="cinfo-val">+55 (21) 96704-2914</div></div>
           <div class="cinfo-item"><div class="cinfo-label">Localização</div><div class="cinfo-val"> Rua Franklin Delano Roosevelt nº 118 quadra 004007103, bairro Cavaleiros, Macaé, RJ — Brasil</div></div>
           <div class="cinfo-item"><div class="cinfo-label">Horário de atendimento</div><div class="cinfo-val">Segunda a Sexta, 08h às 17h</div></div>
@@ -748,45 +750,64 @@ referrerpolicy="no-referrer-when-downgrade">
     </div>
 
     <div class="footer-col">
+    <h4>Empresa</h4>
 
-      <h4>Empresa</h4>
-
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#dashboard">Resultados</a></li>
-        <li><a href="#clientes">Clientes</a></li>
+    <ul>
+        
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="pages/empresa.html">Empresa</a></li>
+        <li><a href="pages/servicos.html">Serviços</a></li>
+        <li><a href="pages/trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        <li><a href="pages/ouvidoria.html">Ouvidoria</a></li>
         <li><a href="#contato">Contato</a></li>
-      </ul>
+    </ul>
+</div>
 
-    </div>
+<div class="footer-col">
+    <h4>Serviços</h4>
 
-    <div class="footer-col">
+    <ul>
+        <li><a href="pages/engenharia-servicos.html">Engenharia & Projetos</a></li>
 
-      <h4>Contato</h4>
+        <li><a href="pages/caldeiraria-usinagem-inspecao.html">
+            Caldeiraria, Usinagem e Inspeção
+        </a></li>
 
-      <ul>
-        <li>Rio de Janeiro • RJ</li>
+        <li><a href="pages/dados-gestao-performance.html">
+            Dados, Gestão e Performance
+        </a></li>
+
+        <li><a href="pages/offshore-onshore-industrial.html">
+            Offshore, Onshore e Industrial
+        </a></li>
+
+        <li><a href="pages/consultoria-ambiental.html">
+            Consultoria Ambiental
+        </a></li>
+
+        <li><a href="pages/sms-conformidade.html">
+            SMS & Conformidade
+        </a></li>
+    </ul>
+</div>
+
+<div class="footer-col">
+
+    <h4>Contato</h4>
+
+    <ul>
+        <li>Rua Franklin Delano Roosevelt, 118</li>
+        <li>Cavaleiros • Macaé/RJ</li>
         <li>(21) 96704-2914</li>
-        <li>contato@newflux.com.br</li>
-      </ul>
+    </ul>
 
-    </div>
-
-    <div class="footer-col">
-
-    <h4>Certificações</h4>
+    <br>
 
     <div class="footer-iso">
 
-        <img src="assets/images/ISO-9001.png"
-             alt="ISO-9001">
-
-        <img src="assets/images/ISO-14001.png"
-             alt="ISO-14001">
-
-        <img src="assets/images/ISO-45001.png"
-             alt="ISO-45001">
+        <img src="../assets/images/ISO-9001.png" alt="ISO 9001">
+        <img src="../assets/images/ISO-14001.png" alt="ISO 14001">
+        <img src="../assets/images/ISO-45001.png" alt="ISO 45001">
 
     </div>
 
@@ -812,3 +833,9 @@ referrerpolicy="no-referrer-when-downgrade">
 <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+<li class="active">
+    <a href="javascript:void(0);" aria-current="page">
+        Home
+    </a>
+</li>

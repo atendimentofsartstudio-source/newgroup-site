@@ -161,3 +161,75 @@ window.addEventListener("load",()=>{
     }
 
 });
+
+
+/* ============================================================
+   PARALLAX — TRABALHE CONOSCO
+============================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const banner = document.querySelector(".trabalhe-banner");
+    const bg = document.querySelector(".trabalhe-banner-bg");
+
+    if (!banner || !bg) return;
+
+    let ticking = false;
+
+    function updateParallax() {
+
+        const rect = banner.getBoundingClientRect();
+
+        const windowHeight = window.innerHeight;
+
+        /*
+         * Só calcula o movimento enquanto o banner
+         * estiver próximo da área visível.
+         */
+
+        if (
+            rect.bottom >= 0 &&
+            rect.top <= windowHeight
+        ) {
+
+            const progress =
+                (windowHeight - rect.top) /
+                (windowHeight + rect.height);
+
+            const movement =
+                (progress - 0.3) * 100;
+
+            bg.style.transform =
+                `translate3d(0, ${movement}px, 0) scale(1.05)`;
+        }
+
+        ticking = false;
+
+    }
+
+    function requestParallax() {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(updateParallax);
+
+            ticking = true;
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        requestParallax,
+        { passive:true }
+    );
+
+    window.addEventListener(
+        "resize",
+        requestParallax
+    );
+
+    updateParallax();
+
+});
