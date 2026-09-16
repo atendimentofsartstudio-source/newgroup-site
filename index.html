@@ -1,69 +1,838 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>New Flux — Soluções Industriais, Engenharia e Gestão de Projetos</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 
-<title>Acesso Exclusivo | New Flux</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet" href="assets/css/login.css">
-
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+<div id="pageLoader">
 
-<div class="background"></div>
+    <div class="loaderLogo">
 
-<div class="login-container">
+        <img src="assets/images/logo-new-flux-site.png" alt="New Flux">
 
-    <img src="assets/images/logo-new-flux-site.png" class="logo" alt="New Flux">
+    </div>
 
-    <span class="badge">
-        APRESENTAÇÃO EXCLUSIVA
-    </span>
+</div>
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="nav">
 
-    <h1>
-        Bem-vindo.
-    </h1>
+  <div class="nav-brand">
+    <img src="assets/images/logo-new-flux-site.png"
+         alt="New Flux"
+         class="nav-logo">
+  </div>
 
-    <p>
+  <ul class="nav-links">
 
-        Este ambiente foi preparado exclusivamente para apresentação da nova plataforma institucional da New Flux.
+  <li class="active">
+    <a href="javascript:void(0);" aria-current="page">
+        Home
+    </a>
+</li>
 
-    </p>
+  <li><a href="pages/empresa.html">Empresa</a></li>
 
-    <form id="loginForm">
+  <li class="dropdown">
 
-        <input
+    <a href="#">
 
-            id="password"
+        Serviços
 
-            type="password"
+        <span class="dropdown-arrow">▾</span>
 
-            placeholder="Digite a senha"
+    </a>
 
-            autocomplete="off"
+    <ul class="dropdown-menu">
 
-        >
+        <li class="dropdown-title">
+            <a href="#servicos">
+                Todos os Serviços
+            </a>
+        </li>
 
-        <button>
+        <li class="dropdown-divider"></li>
 
-            ACESSAR PROJETO
+        <li><a href="pages/engenharia-servicos.html">Engenharia & Serviços</a></li>
 
-        </button>
+        <li><a href="pages/caldeiraria-usinagem-inspecao.html">Caldeiraria | Usinagem | Inspeção</a></li>
 
-    </form>
+        <li><a href="pages/dados-gestao-performance.html">Dados | Gestão | Performance</a></li>
 
-    <small>
+        <li><a href="pages/offshore-onshore-industrial.html">Offshore | Onshore | Industrial</a></li>
 
-        Desenvolvido por FS Art Studio
+        <li><a href="pages/consultoria-ambiental.html">Consultoria Ambiental</a></li>
 
-    </small>
+        <li><a href="pages/sms-conformidade.html">SMS & Conformidade</a></li>
+
+    </ul>
+
+</li>
+
+  <li><a href="pages/trabalhe-conosco.html">Trabalhe Conosco</a></li>
+
+  <li><a href="pages/ouvidoria.html">Ouvidoria</a></li>
+
+  <li><a href="#contato" class="nav-cta">Fale conosco</a></li>
+
+</ul>
+
+  <div class="nav-social">
+
+    <a href="https://instagram.com/newflux_eng"
+       target="_blank"
+       aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/new-flux"
+       target="_blank"
+       aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://wa.me/5522992094880"
+       target="_blank"
+       aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+  </div>
+
+</nav>
+
+<!-- ============================================================
+     HERO — fullscreen image
+     ============================================================ -->
+<section id="hero">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-eyebrow">New Flux Ltda.</div>
+
+        <h1 class="hero-h1">
+            Soluções<br>
+            <em>transformando</em><br>
+            resultados
+        </h1>
+
+        <p class="hero-sub">
+            Da engenharia à execução, oferecemos soluções em Serviços,
+            Caldeiraria e Usinagem para projetos de médio e grande porte,
+            com eficiência, qualidade e total compromisso com os prazos.
+        </p>
+
+        <div class="hero-btns">
+            <a href="#servicos" class="btn-primary">Nossas soluções</a>
+            <a href="#contato" class="btn-ghost">Fale com a gente</a>
+        </div>
+
+        <div class="hero-iso">
+            <img src="assets/images/ISO-9001.png" alt="ISO 9001">
+            <img src="assets/images/ISO-14001.png" alt="ISO 14001">
+            <img src="assets/images/ISO-45001.png" alt="ISO 45001">
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <div class="scroll-line"></div>
+    </div>
+
+</section>
+
+<!-- ============================================================
+     STATS STRIP — contadores animados
+     ============================================================ -->
+<section id="stats">
+  <div class="stats-inner container--wide">
+    <div class="stat-item">
+      <span class="stat-num" data-target="15" data-suffix="+">0</span>
+      <span class="stat-label">Anos de experiência</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="200" data-suffix="+">0</span>
+      <span class="stat-label">Projetos entregues</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="98" data-suffix="%">0</span>
+      <span class="stat-label">Satisfação dos clientes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="0" data-prefix="" data-suffix="">0</span>
+      <span class="stat-label">Acidentes registrados</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="360" data-suffix="°">0</span>
+      <span class="stat-label">Gestão integrada</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE
+     [SUBSTITUIR] imagens pelos arquivos do cliente
+     ============================================================ -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <!-- Bloco de imagens -->
+      <div class="sobre-imgs reveal-left">
+        <div class="sobre-img-main">
+          <!-- [IMG] Foto principal da empresa/operação -->
+          <img src="https://plus.unsplash.com/premium_photo-1661932816149-291a447e3022?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+          <div class="img-badge"><span>Excelência operacional</span></div>
+        </div>
+        <div class="sobre-img-sm">
+          <!-- [IMG] Foto secundária -->
+          <img src="https://plus.unsplash.com/premium_photo-1681823400925-3370502a6b9d?q=80&w=811&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+        </div>
+        <div class="sobre-img-sm">
+          <!-- [IMG] Foto secundária -->
+          <img src="https://plus.unsplash.com/premium_photo-1664301191471-0dc137e504bc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+          <div class="img-badge"><span>Segurança em 1º lugar</span></div>
+        </div>
+      </div>
+      <!-- Texto -->
+      <div class="sobre-text reveal-right">
+        <div class="section-eyebrow">Sobre nós</div>
+        <h2 class="section-title">Uma empresa que <em>transforma</em> desafios em entregas</h2>
+        <div class="gold-line"></div>
+        <p class="section-body">A New Flux é especializada em soluções industriais, engenharia e gestão de projetos. Atuamos com excelência e rigor técnico no setor de óleo, gás e indústria, entregando resultados que combinam segurança, qualidade e eficiência operacional.</p>
+        <div class="sobre-feat-list">
+          <div class="sobre-feat">
+            <div class="sobre-feat-icon">⚙️</div>
+            <div class="sobre-feat-content">
+              <h4>Expertise técnica</h4>
+              <p>Time com sólida formação e histórico em projetos de alta complexidade no setor de óleo e gás.</p>
+            </div>
+          </div>
+          <div class="sobre-feat">
+            <div class="sobre-feat-icon">🛡️</div>
+            <div class="sobre-feat-content">
+              <h4>Segurança como premissa</h4>
+              <p>Zero tolerância a desvios. Protocolos rigorosos e normas regulatórias aplicados em 100% dos projetos.</p>
+            </div>
+          </div>
+          <div class="sobre-feat">
+            <div class="sobre-feat-icon">📐</div>
+            <div class="sobre-feat-content">
+              <h4>Gestão integrada 360°</h4>
+              <p>Controle total do projeto — do planejamento à entrega — com transparência e comunicação proativa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVIÇOS — linhas alternadas imagem + conteúdo
+     [SUBSTITUIR] imagens por fotos reais dos serviços do cliente
+     ============================================================ -->
+<section id="servicos">
+  <div class="servicos-header container reveal">
+    <div class="section-eyebrow">O que fazemos</div>
+    <h2 class="section-title">Nossas <em>soluções</em></h2>
+    <p class="section-body">Desde o planejamento até a entrega, serviços completos para projetos industriais de alta complexidade.</p>
+  </div>
+
+  <!-- Serviço 01 -->
+  <a href="pages/engenharia-servicos.html" class="servico-row reveal">
+    <div class="servico-row-img">
+      <!-- [IMG] Foto de engenharia e projetos -->
+      <img src="assets/images/servico-engenharia-projetos-01.png"/>
+      <div class="servico-row-img-overlay"></div>
+    </div>
+    <div class="servico-row-content">
+      <div class="section-eyebrow">Serviço</div>
+      <div class="servico-row-title">Engenharia & Projetos</div>
+      <p class="servico-row-desc">Engenheiros de projetos, integração, cronograma, riscos e suporte técnico especializado.</p>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
+    </div>
+  </a>
+
+  <!-- Serviço 02 -->
+  <a href="pages/caldeiraria-usinagem-inspecao.html" class="servico-row reveal">
+    <div class="servico-row-img">
+      <!-- [IMG] Foto de caldeiraria -->
+      <img src="assets/images/servico-calderaria-usinagem-inspecao.png"/>
+      <div class="servico-row-img-overlay"></div>
+    </div>
+    <div class="servico-row-content">
+      <div class="section-eyebrow">Serviço</div>
+      <div class="servico-row-title">Calderaria | Usinagem | Inspeção</div>
+      <p class="servico-row-desc">Para projetos de médio e grande porte, entregamos serviços com elevado padrão de qualidade, precisão técnica e excelência operacional.</p>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
+    </div>
+  </a>
+
+  <!-- Serviço 03 -->
+  <a href="pages/dados-gestao-performance.html" class="servico-row reveal">
+    <div class="servico-row-img">
+      <!-- [IMG] Foto de Dados e Gestão -->
+      <img src="assets/images/servico-dados-gestao-performance.png"/>
+      <div class="servico-row-img-overlay"></div>
+    </div>
+    <div class="servico-row-content">
+      <div class="section-eyebrow">Serviço</div>
+      <div class="servico-row-title">Dados | Gestão | Performance</div>
+      <p class="servico-row-desc">Analistas de dados, gestão, processos, gastos de parcerias e inteligência para decisão.</p>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
+    </div>
+  </a>
+
+  <!-- Serviço 04 -->
+  <a href="pages/offshore-onshore-industrial.html" class="servico-row reveal">
+    <div class="servico-row-img">
+      <!-- [IMG] Foto de óleo e gás -->
+      <img src="assets/images/servico-onshore-offshore-industrial.png"/>
+      <div class="servico-row-img-overlay"></div>
+    </div>
+    <div class="servico-row-content">
+      <div class="section-eyebrow">Serviço</div>
+      <div class="servico-row-title">OFFSHORE | ONSHORE | INDUSTRIAL</div>
+      <p class="servico-row-desc">Acesso por cordas, montagem de andaimes, manutenção, pintura, inspeções e apoio operacional.</p>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
+    </div>
+  </a>
+
+    <!-- Serviço 05 -->
+  <a href="pages/consultoria-ambiental.html" class="servico-row reveal">
+    <div class="servico-row-img">
+      <!-- [IMG] Foto de consultoria ambiental -->
+      <img src="assets/images/servico-consultoria-ambiental.png"/>
+      <div class="servico-row-img-overlay"></div>
+    </div>
+    <div class="servico-row-content">
+      <div class="section-eyebrow">Serviço</div>
+      <div class="servico-row-title">CONSULTORIA AMBIENTAL</div>
+      <p class="servico-row-desc">Licenciamento, EIA / RIMA, PGRS, meio biótico, PRAD, conformidade e valor ESG.</p>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
+    </div>
+  </a>
+
+    <!-- Serviço 06 -->
+  <a href="pages/sms-conformidade.html" class="servico-row reveal">
+    <div class="servico-row-img">
+      <!-- [IMG] Foto de SMS e Conformidade -->
+      <img src="assets/images/servico-sms-conformidade.png"/>
+      <div class="servico-row-img-overlay"></div>
+    </div>
+    <div class="servico-row-content">
+      <div class="section-eyebrow">Serviço</div>
+      <div class="servico-row-title">SMS & CONFORMIDADE</div>
+      <p class="servico-row-desc">Análise de riscos, auditorias, higiene ocupacional, meio ambiente e gestão de segurança.</p>
+      <span class="servico-link">
+
+        Conheça este serviço →
+
+      </span>
+    </div>
+  </a>
+</section>
+
+<!-- ============================================================
+     DASHBOARD / MÉTRICAS — gráficos e indicadores animados
+     ============================================================ -->
+<section id="dashboard">
+  <div class="container">
+    <div class="dashboard-header reveal">
+      <div class="section-eyebrow">Performance</div>
+      <h2 class="section-title">Resultados que <em>falam por si</em></h2>
+      <div class="gold-line"></div>
+      <p class="section-body">Indicadores reais de desempenho que refletem nosso compromisso com qualidade e entrega.</p>
+    </div>
+
+    <div class="dashboard-grid">
+
+      <!-- CARD 1: KPIs rápidos -->
+      <div class="dash-card dash-card-highlight reveal">
+        <div class="dash-label">Visão Geral</div>
+        <div class="kpi-row">
+          <div class="kpi-item"><span class="kpi-num counter" data-target="98">0</span><span class="kpi-lbl">% Satisfação</span></div>
+          <div class="kpi-item"><span class="kpi-num counter" data-target="15">0</span><span class="kpi-lbl">Anos</span></div>
+          <div class="kpi-item"><span class="kpi-num counter" data-target="200">0</span><span class="kpi-lbl">Projetos</span></div>
+          <div class="dash-card dash-card-highlight reveal"></div>
+        </div>
+      </div>
+
+      <!-- CARD 4: Donut chart — Mix de serviços -->
+      <div class="dash-card reveal">
+        <div class="dash-label">Mix de Serviços</div>
+        <div class="donut-wrap">
+          <svg class="donut-svg" width="110" height="110" viewBox="0 0 110 110">
+            <circle cx="55" cy="55" r="44" fill="none" stroke="var(--dark-5)" stroke-width="14"/>
+            <!-- Segmentos — stroke-dasharray calcula: (pct/100)*276.46 -->
+            <circle cx="55" cy="55" r="44" fill="none" stroke="#C49A2A" stroke-width="14"
+              stroke-dasharray="110.6 165.9" stroke-dashoffset="0"
+              transform="rotate(-90 55 55)" class="donut-seg" data-val="110.6"/>
+            <circle cx="55" cy="55" r="44" fill="none" stroke="#8B6B1F" stroke-width="14"
+              stroke-dasharray="69 207.5" stroke-dashoffset="-110.6"
+              transform="rotate(-90 55 55)" class="donut-seg" data-val="69"/>
+            <circle cx="55" cy="55" r="44" fill="none" stroke="#5A4415" stroke-width="14"
+              stroke-dasharray="55.3 221.2" stroke-dashoffset="-179.6"
+              transform="rotate(-90 55 55)" class="donut-seg" data-val="55.3"/>
+            <circle cx="55" cy="55" r="44" fill="none" stroke="#2C2218" stroke-width="14"
+              stroke-dasharray="41.5 234.96" stroke-dashoffset="-234.9"
+              transform="rotate(-90 55 55)" class="donut-seg" data-val="41.5"/>
+            <text x="55" y="52" text-anchor="middle" class="radial-label-center" fill="#D4A843" font-size="14" font-family="Cormorant Garamond,serif" font-weight="700">4</text>
+            <text x="55" y="65" text-anchor="middle" class="radial-sublabel" fill="#8A8070" font-size="7" font-family="Barlow,sans-serif">ÁREAS</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="donut-legend-item"><div class="donut-dot" style="background:#C49A2A"></div>Gestão de Projetos (40%)</div>
+            <div class="donut-legend-item"><div class="donut-dot" style="background:#8B6B1F"></div>Engenharia (25%)</div>
+            <div class="donut-legend-item"><div class="donut-dot" style="background:#5A4415"></div>Sol. Industriais (20%)</div>
+            <div class="donut-legend-item"><div class="donut-dot" style="background:#2C2218"></div>Seg. Operacional (15%)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: Medidor radial — NPS -->
+      <div class="dash-card reveal" style="text-align:center;">
+        <div class="dash-label">NPS — Net Promoter Score</div>
+        <div class="radial-wrap">
+          <svg width="140" height="80" viewBox="0 0 140 80">
+            <defs>
+              <linearGradient id="arc-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#C49A2A"/>
+                <stop offset="100%" stop-color="#EDD07A"/>
+              </linearGradient>
+            </defs>
+            <!-- Background arc -->
+            <path d="M10,75 A60,60 0 0,1 130,75" fill="none" stroke="var(--dark-5)" stroke-width="12" stroke-linecap="round"/>
+            <!-- Value arc — animado via JS -->
+            <path class="nps-arc" d="M10,75 A60,60 0 0,1 130,75" fill="none" stroke="url(#arc-grad)" stroke-width="12" stroke-linecap="round"
+              stroke-dasharray="188" stroke-dashoffset="188"/>
+            <text x="70" y="68" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="22" font-weight="700" fill="#D4A843">78</text>
+            <text x="70" y="80" text-anchor="middle" font-family="Barlow,sans-serif" font-size="7" fill="#8A8070" letter-spacing="1">EXCELENTE</text>
+          </svg>
+        </div>
+        <div style="margin-top:0.5rem;">
+          <div class="dash-delta" style="font-size:0.8rem;">↑ +12 pontos vs. ano anterior</div>
+        </div>
+      </div>
+
+      <!-- CARD 2: Gráfico de barras — Projetos por setor -->
+      <div class="dash-card dash-card--wide reveal">
+        <div class="dash-label">Projetos por Setor (últimos 5 anos)</div>
+        <div class="mini-bars" id="bar-chart">
+          <div class="mini-bar active" data-h="85" style="height:8px;"><span class="mini-bar-label">Óleo & Gás</span></div>
+          <div class="mini-bar" data-h="62" style="height:8px;"><span class="mini-bar-label">Offshore</span></div>
+          <div class="mini-bar" data-h="78" style="height:8px;"><span class="mini-bar-label">Petroquím.</span></div>
+          <div class="mini-bar" data-h="45" style="height:8px;"><span class="mini-bar-label">Energia</span></div>
+          <div class="mini-bar" data-h="55" style="height:8px;"><span class="mini-bar-label">Infraestr.</span></div>
+          <div class="mini-bar" data-h="38" style="height:8px;"><span class="mini-bar-label">Mining</span></div>
+          <div class="mini-bar" data-h="70" style="height:8px;"><span class="mini-bar-label">Industrial</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 3: Progresso de competências -->
+      <div class="dash-card reveal">
+        <div class="dash-label">Índices de Desempenho</div>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-header"><span class="progress-name">Entrega no Prazo</span><span class="progress-pct">94%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="94"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header"><span class="progress-name">Dentro do Orçamento</span><span class="progress-pct">89%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="89"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header"><span class="progress-name">Satisfação do Cliente</span><span class="progress-pct">98%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="98"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header"><span class="progress-name">Zero Acidentes</span><span class="progress-pct">100%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="100"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: Sparkline — crescimento -->
+      <div class="dash-card dash-card--wide reveal">
+        <div class="dash-label">Crescimento de Projetos (2019–2024)</div>
+        <div class="dash-value counter" data-target="47" data-suffix="%">0%</div>
+        <div class="dash-delta">↑ crescimento acumulado no período</div>
+        <div class="sparkline-wrap">
+          <svg width="100%" height="60" viewBox="0 0 400 60" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="spk-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C49A2A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#C49A2A" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Area fill -->
+            <path class="spark-path-fill" d="M0,45 L66,38 L133,30 L200,25 L266,18 L333,12 L400,5 L400,60 L0,60 Z"
+              fill="url(#spk-grad)" opacity="0"/>
+            <!-- Line -->
+            <path class="spark-path" d="M0,45 L66,38 L133,30 L200,25 L266,18 L333,12 L400,5"
+              fill="none" stroke="var(--gold)" stroke-width="2"
+              stroke-dasharray="600" stroke-dashoffset="600"/>
+            <!-- Dots -->
+            <circle cx="0" cy="45" r="3.5" fill="var(--gold)" opacity="0.7"/>
+            <circle cx="66" cy="38" r="3.5" fill="var(--gold)" opacity="0.7"/>
+            <circle cx="133" cy="30" r="3.5" fill="var(--gold)" opacity="0.7"/>
+            <circle cx="200" cy="25" r="3.5" fill="var(--gold)" opacity="0.7"/>
+            <circle cx="266" cy="18" r="3.5" fill="var(--gold)" opacity="0.7"/>
+            <circle cx="333" cy="12" r="3.5" fill="var(--gold)" opacity="0.7"/>
+            <circle cx="400" cy="5" r="4.5" fill="var(--gold-pale)"/>
+          </svg>
+          <div class="sparkline-labels">
+            <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span>
+          </div>
+        </div>
+      </div>
+
+      
+    </div><!-- /dashboard-grid -->
+  </div>
+</section>
+
+<!-- ============================================================
+     IMPACT — fullscreen quote com foto
+     [SUBSTITUIR] imagem pela foto de impacto do cliente
+     ============================================================ -->
+<div id="impact">
+  <div class="impact-bg"></div>
+  <div class="impact-overlay"></div>
+  <div class="impact-content reveal">
+    <blockquote>
+      Fazer acontecer, para nós, é agir com<br>
+      <strong>disciplina, segurança, método</strong><br>
+      e compromisso inabalável com a qualidade.
+    </blockquote>
+    <cite>New Flux &nbsp;—&nbsp; Soluções Industriais, Engenharia e Gestão de Projetos</cite>
+  </div>
+</div>
+
+<!-- ============================================================
+     VALORES — ACTION
+     ============================================================ -->
+<section id="valores">
+  <div class="container">
+    <!-- Topo: texto + foto com citação -->
+    <div class="valores-top">
+      <div class="reveal-left">
+        <div class="section-eyebrow">Nossos valores</div>
+        <h2 class="section-title">O jeito <em>New Flux</em><br>de trabalhar</h2>
+        <div class="gold-line"></div>
+        <p class="section-body">Pratique o ACTION diariamente: segurança, qualidade, colaboração e melhoria contínua. São os princípios que guiam cada entrega, cada decisão e cada interação da nossa equipe.</p>
+      </div>
+      <!-- [IMG] Foto da equipe ou treinamento -->
+      <div class="valores-top-img reveal-right">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&fit=crop" alt="Equipe New Flux" loading="lazy"/>
+        <div class="valores-top-img-overlay"></div>
+        <div class="valores-top-quote">
+          "Trabalhamos como um time. Construímos soluções juntos."
+          <cite>— Nosso jeito de trabalhar</cite>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de valores -->
+    <div class="valores-grid">
+      <div class="valor-card reveal" data-letter="A">
+        <div class="valor-accent"><div class="valor-accent-inner"></div></div>
+        <div class="valor-title">Action — Ação</div>
+        <div class="valor-sub">Atitude, disciplina e entrega com qualidade</div>
+        <p class="valor-desc">Transformamos planos em entregas, decisões em resultados e desafios em oportunidades. Fazer acontecer é agir com método, segurança e compromisso.</p>
+      </div>
+      <div class="valor-card reveal" data-letter="C">
+        <div class="valor-accent"><div class="valor-accent-inner"></div></div>
+        <div class="valor-title">Customer-focused</div>
+        <div class="valor-sub">Foco no cliente</div>
+        <p class="valor-desc">O cliente em primeiro lugar em cada entrega, decisão e interação. Qualidade, confiabilidade e comunicação proativa com senso de urgência.</p>
+      </div>
+      <div class="valor-card reveal" data-letter="T">
+        <div class="valor-accent"><div class="valor-accent-inner"></div></div>
+        <div class="valor-title">Take Ownership</div>
+        <div class="valor-sub">Responsabilidade de ponta a ponta</div>
+        <p class="valor-desc">Assumimos total responsabilidade pelas entregas. Antecipamos riscos, tomamos iniciativa e garantimos compromissos — sem transferir responsabilidades.</p>
+      </div>
+      <div class="valor-card reveal" data-letter="I">
+        <div class="valor-accent"><div class="valor-accent-inner"></div></div>
+        <div class="valor-title">Interaction</div>
+        <div class="valor-sub">Colaboração e respeito</div>
+        <p class="valor-desc">Comunicar com clareza, ouvir com atenção, compartilhar conhecimento e construir soluções juntos — sempre com respeito às pessoas e à segurança.</p>
+      </div>
+      <div class="valor-card reveal" data-letter="O">
+        <div class="valor-accent"><div class="valor-accent-inner"></div></div>
+        <div class="valor-title">Owner-minded</div>
+        <div class="valor-sub">Mentalidade de dono</div>
+        <p class="valor-desc">Agimos com senso de pertencimento. Priorizamos o essencial, eliminamos desperdícios e tomamos decisões como se o negócio fosse nosso.</p>
+      </div>
+      <div class="valor-card reveal" data-letter="N">
+        <div class="valor-accent"><div class="valor-accent-inner"></div></div>
+        <div class="valor-title">New Ways</div>
+        <div class="valor-sub">Inovação e melhoria contínua</div>
+        <p class="valor-desc">Questionamos processos, simplificamos rotinas e aprendemos com dados. Transformamos lições em padrões melhores, elevando produtividade e qualidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIFERENCIAIS
+     ============================================================ -->
+<section id="diferenciais-slider">
+  <div class="container">
+    <div class="section-eyebrow reveal">Por que a New Flux</div>
+    <h2 class="section-title reveal">Nossos <em>diferenciais</em></h2>
+    <div class="dif-grid">
+      <div class="dif-list reveal-left">
+        <div class="dif-item">
+          <div class="dif-num">01</div>
+          <div class="dif-content"><h4>Expertise técnica comprovada</h4><p>Time com sólida formação e histórico de entregas em projetos industriais de alta complexidade no setor de óleo e gás.</p></div>
+        </div>
+        <div class="dif-item">
+          <div class="dif-num">02</div>
+          <div class="dif-content"><h4>Segurança como premissa</h4><p>Zero tolerância a desvios de segurança. Protocolos rigorosos e normas regulatórias aplicados em 100% dos projetos, sem exceção.</p></div>
+        </div>
+        <div class="dif-item">
+          <div class="dif-num">03</div>
+          <div class="dif-content"><h4>Gestão integrada 360°</h4><p>Controle total do projeto — do planejamento à entrega — com transparência, rastreabilidade e comunicação proativa com o cliente.</p></div>
+        </div>
+        <div class="dif-item">
+          <div class="dif-num">04</div>
+          <div class="dif-content"><h4>Parceria estratégica</h4><p>Mais do que um fornecedor: um parceiro de longo prazo. Relações sólidas construídas com confiança, entrega consistente e valor gerado.</p></div>
+        </div>
+        <div class="dif-item">
+          <div class="dif-num">05</div>
+          <div class="dif-content"><h4>Equipe certificada</h4><p>Profissionais qualificados, certificados e continuamente treinados para operar com excelência nos mais exigentes ambientes industriais.</p></div>
+        </div>
+      </div>
+      <!-- Bloco de fotos -->
+      <div class="dif-imgs reveal-right">
+        <!-- [IMG] Fotos de diferenciais da empresa -->
+        <div class="dif-img dif-img--tall">
+          <img src="assets/images/diferenciais-foto-01.png"/>
+        </div>
+        <div class="dif-img dif-img--sm">
+          <img src="https://plus.unsplash.com/premium_photo-1682126196145-d23f2022a8dd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+        </div>
+        <div class="dif-img dif-img--sm">
+          <img src="https://images.unsplash.com/photo-1748256467077-c75ef01579aa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gestão de projetos" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTATO
+     ============================================================ -->
+<section id="contato">
+  <div class="container">
+    <div class="contato-grid">
+      <div class="reveal-left">
+        <div class="section-eyebrow">Fale conosco</div>
+        <h2 class="section-title">Vamos <em>conversar</em></h2>
+        <div class="gold-line"></div>
+        <p class="section-body">Tem um projeto em mente ou quer conhecer melhor nossas soluções? Nossa equipe está pronta para atender você com agilidade e profissionalismo.</p>
+        <div class="contato-info-list">
+          <!-- [SUBSTITUIR] dados de contato reais do cliente -->
+          <div class="cinfo-item"><div class="cinfo-label">E-mails</div><div class="cinfo-val">diretoria@newflux.eng.br / fiscal@newflux.eng.br</div></div>
+          <div class="cinfo-item"><div class="cinfo-label">WhatsApp</div><div class="cinfo-val">+55 (22) 99209-4880</div></div>
+          <div class="cinfo-item"><div class="cinfo-label">Localização</div><div class="cinfo-val"> Rua Franklin Delano Roosevelt nº 118 quadra 004007103, bairro Cavaleiros, Macaé, RJ — Brasil</div></div>
+          <div class="cinfo-item"><div class="cinfo-label">Horário de atendimento</div><div class="cinfo-val">Segunda a Sexta, 08h às 17h</div></div>
+        </div>
+      </div>
+      <div class="form-block reveal-right">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Nome</label><input type="text" class="form-control" placeholder="Seu nome completo"/></div>
+          <div class="form-group"><label class="form-label">Empresa</label><input type="text" class="form-control" placeholder="Nome da empresa"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">E-mail</label><input type="email" class="form-control" placeholder="seu@email.com"/></div>
+          <div class="form-group"><label class="form-label">Telefone</label><input type="tel" class="form-control" placeholder="+55 (21) 9 0000-0000"/></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Área de interesse</label>
+          <select class="form-control">
+            <option value="" disabled selected>Selecione um serviço</option>
+            <option>Gestão de Projetos</option>
+            <option>Engenharia Industrial</option>
+            <option>Soluções Industriais</option>
+            <option>Segurança Operacional</option>
+            <option>Consultoria Técnica</option>
+            <option>Fornecimento de Mão de Obra</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Mensagem</label><textarea class="form-control" placeholder="Descreva seu projeto, desafio ou dúvida..."></textarea></div>
+        <a href="mailto:fiscal@newflux.eng.br?subject=Contato pelo site New Flux" class="btn-primary contato-btn">
+    Enviar mensagem →
+</a>
+        <p style="font-size:0.72rem;color:var(--text-light);margin-top:0.8rem;text-align:center;">Respondemos em até 24 horas úteis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="mapa">
+
+<iframe
+src="https://www.google.com/maps?q=Rua+Franklin+Delano+Roosevelt+118,+Macaé,+RJ&output=embed"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+
+  <div class="footer-top">
+
+    <div class="footer-col footer-brand">
+
+      <img src="assets/images/logo-new-flux-site.png"
+           alt="New Flux"
+           class="footer-logo">
+
+      <p class="footer-text">
+        Excelência em Engenharia, Gestão de Projetos,
+        Soluções Industriais e Segurança Operacional.
+      </p>
+
+      <div class="footer-social">
+
+        <a href="https://instagram.com/newflux_eng" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/new-flux" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://wa.me/5522992094880" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        
+      </div>
+
+    </div>
+
+    <div class="footer-col">
+    <h4>Empresa</h4>
+
+    <ul>
+        
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/empresa.html">Empresa</a></li>
+        <li><a href="pages/servicos.html">Serviços</a></li>
+        <li><a href="pages/trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        <li><a href="pages/ouvidoria.html">Ouvidoria</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</div>
+
+<div class="footer-col">
+    <h4>Serviços</h4>
+
+    <ul>
+        <li><a href="pages/engenharia-servicos.html">Engenharia & Projetos</a></li>
+
+        <li><a href="pages/caldeiraria-usinagem-inspecao.html">
+            Caldeiraria, Usinagem e Inspeção
+        </a></li>
+
+        <li><a href="pages/dados-gestao-performance.html">
+            Dados, Gestão e Performance
+        </a></li>
+
+        <li><a href="pages/offshore-onshore-industrial.html">
+            Offshore, Onshore e Industrial
+        </a></li>
+
+        <li><a href="pages/consultoria-ambiental.html">
+            Consultoria Ambiental
+        </a></li>
+
+        <li><a href="pages/sms-conformidade.html">
+            SMS & Conformidade
+        </a></li>
+    </ul>
+</div>
+
+<div class="footer-col">
+
+    <h4>Contato</h4>
+
+    <ul>
+        <li>Rua Franklin Delano Roosevelt, 118</li>
+        <li>Cavaleiros • Macaé/RJ</li>
+        <li>+55 (22) 99209-4880</li>
+    </ul>
+
+    <br>
+
+    <div class="footer-iso">
+
+        <img src="assets/images/ISO-9001.png" alt="ISO 9001">
+        <img src="assets/images/ISO-14001.png" alt="ISO 14001">
+        <img src="assets/images/ISO-45001.png" alt="ISO 45001">
+
+    </div>
 
 </div>
 
-<script src="assets/js/login.js"></script>
+  </div>
 
+  <div class="footer-bottom">
+
+    <span>
+      © 2025 New Flux Ltda.
+      Todos os direitos reservados.
+      CNPJ 10.833.907/0001-95
+    </span>
+
+  </div>
+
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT — animações, contadores, gráficos
+     ============================================================ -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
+
+

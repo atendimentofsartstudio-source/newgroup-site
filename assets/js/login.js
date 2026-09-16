@@ -21,7 +21,7 @@ form.addEventListener("submit", function(e){
 
         setTimeout(function(){
 
-            window.location.href = "home.html";
+            window.location.href = "index.html";
 
         },700);
 
